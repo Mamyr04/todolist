@@ -1,0 +1,6 @@
+{% extends "tasks/base.html" %}
+{% block title %}Результат теста{% endblock %}
+{% block content %}
+  <h1>Ваш результат: {{ score }} из {{ total }}</h1>
+  <a href="{% url 'quiz' %}">Пройти ещё раз</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "tasks/base.html" %}
+{% block title %}Quiz{% endblock %}
+{% block content %}
+  <h1>Тест</h1>
+  <form method="post">{% csrf_token %}
+    {% for q in questions %}
+      <fieldset>
+        <legend>{{ q.text }}</legend>
+        <label><input type="radio" name="question_{{ q.id }}" value="1"> {{ q.option1 }}</label><br>
+        <label><input type="radio" name="question_{{ q.id }}" value="2"> {{ q.option2 }}</label><br>
+        <label><input type="radio" name="question_{{ q.id }}" value="3"> {{ q.option3 }}</label><br>
+        <label><input type="radio" name="question_{{ q.id }}" value="4"> {{ q.option4 }}</label>
+      </fieldset>
+    {% endfor %}
+    <button type="submit">Проверить</button>
+  </form>
+{% endblock %}

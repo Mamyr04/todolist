@@ -1,0 +1,30 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="mb-4">Добро пожаловать в Todo List!</h1>
+            <p class="lead mb-4">Управляйте своими задачами легко и удобно</p>
+
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'login' %}" class="btn btn-primary btn-lg px-4">
+                    <i class="bi bi-box-arrow-in-right me-2"></i>Войти
+                </a>
+                <a href="{% url 'register' %}" class="btn btn-success btn-lg px-4">
+                    <i class="bi bi-person-plus me-2"></i>Регистрация
+                </a>
+            </div>
+
+            <div class="mt-5">
+                <h3>Возможности приложения:</h3>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-check-circle text-success me-2"></i>Создание и управление задачами</li>
+                    <li><i class="bi bi-check-circle text-success me-2"></i>Дневной и ночной режимы</li>
+                    <li><i class="bi bi-check-circle text-success me-2"></i>Простая регистрация и вход</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
